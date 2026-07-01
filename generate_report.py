@@ -46,7 +46,7 @@ html = f"""<!DOCTYPE html>
 <title>信用风险模型报告 — Give Me Some Credit</title>
 <style>
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-    body {{ font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    body {{ font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Heiti SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif;
             background: #f0f2f5; color: #333; line-height: 1.8; }}
     .container {{ max-width: 1100px; margin: 0 auto; padding: 20px; }}
 
@@ -65,7 +65,9 @@ html = f"""<!DOCTYPE html>
                 box-shadow: 0 2px 12px rgba(0,0,0,0.06); }}
     .section h2 {{ font-size: 1.5em; color: #1a1a2e; margin-bottom: 20px;
                    padding-bottom: 10px; border-bottom: 3px solid #0f3460; }}
-    .section h3 {{ font-size: 1.15em; color: #333; margin: 15px 0 10px; }}
+    .section h3 {{ font-size: 1.15em; color: #333; margin: 15px 0 10px;
+                    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Heiti SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif;
+                    font-weight: 600; letter-spacing: 0.02em; }}
 
     /* 表格 */
     .data-table {{ width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.95em; }}
@@ -269,7 +271,7 @@ html = f"""<!DOCTYPE html>
 </html>
 """
 
-report_path = os.path.join(BASE_DIR, 'credit_risk_report.html')
+report_path = os.path.join(BASE_DIR, 'index.html')
 with open(report_path, 'w', encoding='utf-8') as f:
     f.write(html)
 print(f"报告已生成: {report_path}")
