@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# WorkBuddy
+.workbuddy/
+
+# Model binary
+output/*.pkl
+
+# OS
+.DS_Store
+
+# Temp
+/tmp/
+.codebuddy/
